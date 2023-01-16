@@ -24,7 +24,10 @@
     log.SetPrefix("greetings: ")
     log.SetFlags(0)
 
-    message, err := go_greetings.Hello("")
+    // uncomment for check error handler
+    // message, err := go_greetings.Hello("")
+    message, err := go_greetings.Hello("Kolya")
+
     if err != nil {
       log.Fatal(err)
     }
