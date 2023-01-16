@@ -12,12 +12,23 @@
 
   import (
     "fmt"
+    "log"
+
     "github.com/devpeskov/go_greetings"
   )
 
   func main() {
-    // Get a greeting message and print it.
-    message := go_greetings.Hello("Nikolay")
+    // Set properties of the predefined Logger, including
+    // the log entry prefix and a flag to disable printing
+    // the time, source file, and line number.
+    log.SetPrefix("greetings: ")
+    log.SetFlags(0)
+
+    message, err := go_greetings.Hello("")
+    if err != nil {
+      log.Fatal(err)
+    }
+
     fmt.Println(message)
   }
   ```
