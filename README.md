@@ -24,16 +24,18 @@
     log.SetPrefix("greetings: ")
     log.SetFlags(0)
 
-    // uncomment for check error handler
-    // message, err := go_greetings.Hello("")
-    message, err := go_greetings.Hello("Kolya")
+    names := []string{"Kolya", "Vanya", "Sveta"}
 
+    mapped_messages, err := go_greetings.Hellos(names)
     if err != nil {
       log.Fatal(err)
     }
-
-    fmt.Println(message)
+    for name, greeting := range mapped_messages {
+      fmt.Println("\n--------", name, "--------")
+      fmt.Println(greeting)
+    }
   }
+
   ```
 - Get remote-module:
   ```
