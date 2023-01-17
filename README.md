@@ -42,7 +42,7 @@
   ```
   go mod tidy
   // or
-  go get github.com/devpeskov/go_greetings
+  go get github.com/devpeskov/go_greetings@latest
   ```
 - Run: `go run .`
 
