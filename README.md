@@ -1,5 +1,6 @@
 ## Example usage:
 
+#### How to use this module:
 - Init new module: `go mod init`:
   ```
   mkdir hello
@@ -44,3 +45,8 @@
   go get github.com/devpeskov/go_greetings
   ```
 - Run: `go run .`
+
+#### How to test this module:
+```
+go test [-v]
+```
